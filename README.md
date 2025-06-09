@@ -11,16 +11,27 @@ Este projeto implementa um sistema de segmentação de objetos em movimento util
 
 ## Instalação
 
-1. Clone este repositório
+1. Clone este repositório:
+```bash
+git clone https://github.com/d1g4odev/OpenCV---Captura-e-segmenta-o-de-objetos-em-v-deo.git
+cd OpenCV---Captura-e-segmenta-o-de-objetos-em-v-deo
+```
+
 2. Crie um ambiente virtual (recomendado):
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
+
 3. Instale as dependências:
 ```bash
 pip install -r requirements.txt
+```
+
+4. Execute o script de setup para baixar o vídeo de teste:
+```bash
+python setup.py
 ```
 
 ## Uso
@@ -46,9 +57,9 @@ python main.py --fonte [camera|arquivo] --algoritmo [MOG|MOG2|GMG|KNN] --arquivo
 python main.py --fonte camera --algoritmo MOG2
 ```
 
-2. Processando um arquivo de vídeo com KNN:
+2. Processando o vídeo de teste com KNN:
 ```bash
-python main.py --fonte arquivo --algoritmo KNN --arquivo video.mp4
+python main.py --fonte arquivo --algoritmo KNN --arquivo video_teste.avi
 ```
 
 ## Estrutura do Projeto
@@ -56,6 +67,7 @@ python main.py --fonte arquivo --algoritmo KNN --arquivo video.mp4
 - `main.py`: Ponto de entrada da aplicação
 - `video_processor.py`: Implementação do processador de vídeo
 - `utils.py`: Funções utilitárias
+- `setup.py`: Script de configuração do projeto
 - `tests/`: Diretório contendo testes unitários
 
 ## Testes
